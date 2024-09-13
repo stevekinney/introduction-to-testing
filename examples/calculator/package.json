@@ -1,0 +1,32 @@
+{
+  "name": "calculator-example",
+  "version": "1.0.0",
+  "description": "A calculator that calculates numbers, but with tests.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "vite dev",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevekinney/testing-javascript.git"
+  },
+  "author": "Steve Kinney <hello@stevekinney.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevekinney/testing-javascript/issues"
+  },
+  "homepage": "https://github.com/stevekinney/testing-javascript#readme",
+  "devDependencies": {
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@vitest/ui": "^2.1.1",
+    "autoprefixer": "^10.4.20",
+    "happy-dom": "^15.7.4",
+    "tailwindcss": "^3.4.11",
+    "vite": "^5.4.5",
+    "vitest": "^2.1.1"
+  }
+}

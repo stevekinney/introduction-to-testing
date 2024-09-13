@@ -1,0 +1,25 @@
+{
+  "name": "calculator-reducer",
+  "version": "1.0.0",
+  "description": "Yet another attempt at implementing a calculator, but this time with a reducer.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "vitest --ui",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevekinney/testing-javascript.git"
+  },
+  "author": "Steve Kinney <hello@stevekinney.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevekinney/testing-javascript/issues"
+  },
+  "homepage": "https://github.com/stevekinney/testing-javascript#readme",
+  "devDependencies": {
+    "@vitest/ui": "^2.1.1",
+    "vitest": "^2.1.1"
+  }
+}

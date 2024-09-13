@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex justify-center items-center h-screen bg-purple-50 font-sans m-0;
+  }
+
+  button {
+    @apply bg-slate-600 text-white text-xl cursor-pointer flex items-center justify-center transition duration-100 ease-in-out p-4 hover:bg-slate-700 active:bg-slate-800 rounded-xl;
+  }
+}
+
+@layer components {
+  .calculator {
+    @apply grid grid-cols-4 gap-2 bg-slate-950 rounded-xl shadow-lg p-4;
+  }
+
+  .number {
+    @apply bg-slate-600 text-white text-xl cursor-pointer flex items-center justify-center transition duration-100 ease-in-out p-4 hover:bg-slate-700 active:bg-slate-800 rounded-xl;
+    &[data-value='0'] {
+      @apply col-span-3;
+    }
+  }
+
+  .operator {
+    @apply bg-orange-500 hover:bg-orange-600 active:bg-orange-700;
+  }
+
+  #equals {
+    @apply bg-green-500 hover:bg-green-600 active:bg-green-700 col-start-3 col-span-2;
+  }
+
+  #clear {
+    @apply bg-red-500 hover:bg-red-600 active:bg-red-700;
+  }
+
+  .display {
+    @apply col-span-4 bg-cyan-100 text-cyan-800 border-cyan-200 outline outline-2 outline-transparent text-2xl text-right p-4 block font-semibold rounded-md;
+  }
+}

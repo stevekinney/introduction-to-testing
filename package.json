@@ -1,0 +1,40 @@
+{
+  "name": "testing-javascript",
+  "version": "1.0.0",
+  "description": "A set of examples and exercises for Steve Kinney's \"Introduction to Testing\" course for Frontend Masters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevekinney/testing-javascript.git"
+  },
+  "keywords": [
+    "testing",
+    "vitest",
+    "unit",
+    "testing",
+    "javascript",
+    "tutorial"
+  ],
+  "author": "Steve Kinney <hello@stevekinney.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevekinney/testing-javascript/issues"
+  },
+  "homepage": "https://github.com/stevekinney/testing-javascript#readme",
+  "workspaces": [
+    "examples/calculator",
+    "examples/tic-tac-toe",
+    "examples/task-list",
+    "examples/authentication",
+    "examples/guess-the-number",
+    "examples/basic-math",
+    "examples/calculator-reducer"
+  ],
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

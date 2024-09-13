@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "paths": {
+      "*": ["node_modules/*"],
+      "./*": ["./*"],
+      "./*.html": ["./*"],
+      "./*.html?raw": ["./*"]
+    }
+  },
+  "include": ["examples/**/*.js"],
+  "exclude": ["node_modules", "dist"]
+}
