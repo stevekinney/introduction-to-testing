@@ -11,6 +11,6 @@
       "./*.html?raw": ["./*"]
     }
   },
-  "include": ["examples/**/*.js"],
+  "include": ["examples/**/*.js", "examples/accident-counter/src/reducer.ts"],
   "exclude": ["node_modules", "dist"]
 }

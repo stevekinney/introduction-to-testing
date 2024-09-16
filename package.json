@@ -32,7 +32,8 @@
     "examples/authentication",
     "examples/guess-the-number",
     "examples/basic-math",
-    "examples/calculator-reducer"
+    "examples/characters",
+    "examples/accident-counter"
   ],
   "devDependencies": {
     "prettier": "^3.3.3"
