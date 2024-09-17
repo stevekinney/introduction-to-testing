@@ -47,7 +47,13 @@ export const updateTask = (id, updates) => {
 
   if (!task) return undefined;
 
-  Object.assign(task, updates, { lastModified: new Date() });
+  for (const key in updates) {
+    if (updates[key] !== undefined) {
+      task[key] = updates[key];
+    }
+  }
+
+  Object.assign(task, { lastModified: new Date() });
   return task;
 };
 

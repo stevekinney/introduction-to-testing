@@ -1,8 +1,8 @@
 import { Task } from './task';
-import { useTaskContext } from './task-context';
+import { useTaskState } from './task-context';
 
 export const Tasks = () => {
-  const { tasks } = useTaskContext();
+  const tasks = useTaskState();
 
   return (
     <section>

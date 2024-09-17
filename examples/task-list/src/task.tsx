@@ -1,12 +1,12 @@
 import { DateTime } from './date-time';
-import { useTaskContext } from './task-context';
+import { useTaskActions } from './task-context';
 
 type TaskProps = {
   task: import('../types').Task;
 };
 
 export const Task = ({ task }: TaskProps) => {
-  const { updateTask, deleteTask } = useTaskContext();
+  const { updateTask, deleteTask } = useTaskActions();
 
   return (
     <li className="block p-4 space-y-2 border-t-2 border-x-2 last:border-b-2">
