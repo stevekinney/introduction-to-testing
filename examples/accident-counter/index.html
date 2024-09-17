@@ -3,7 +3,7 @@
   <head>
     <title>Accident Counter</title>
   </head>
-  <script type="module" lang="jsx">
+  <script type="module">
     import { createElement } from 'react';
     import { createRoot } from 'react-dom/client';
     import { Counter } from './src/counter.tsx';
@@ -11,10 +11,7 @@
 
     createRoot(document.getElementById('root')).render(createElement(Counter));
   </script>
-  <body>
-    <div
-      class="container flex items-center justify-center h-screen"
-      id="root"
-    ></div>
+  <body class="container flex items-center justify-center min-h-screen">
+    <div class="" id="root"></div>
   </body>
 </html>

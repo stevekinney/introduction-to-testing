@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from 'react';
+import { useReducer, useEffect } from 'react';
 import { reducer } from './reducer';
 
 export const Counter = () => {
@@ -12,12 +12,12 @@ export const Counter = () => {
   return (
     <div className="p-8 space-y-8 text-center bg-white border rounded-md shadow-lg border-slate-400">
       <div className="space-y-4">
-        <div data-test-id="counter-count" className="font-semibold text-8xl">
+        <div data-testid="counter-count" className="font-semibold text-8xl">
           {state.count}
         </div>
         <p>
-          <span data-test-id="counter-unit">{unit}</span> since the last
-          accident.
+          <span data-testid="counter-unit">{unit}</span> since the last
+          JavaScript-related accident.
         </p>
       </div>
       <div className="flex gap-4">

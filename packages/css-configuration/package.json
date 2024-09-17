@@ -1,12 +1,11 @@
 {
-  "name": "calculator-reducer",
+  "name": "css-configuration",
   "version": "1.0.0",
-  "description": "Yet another attempt at implementing a calculator, but this time with a reducer.",
-  "main": "src/index.js",
+  "description": "Some CSS settings for Vite/PostCSS that includes Tailwind",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "vitest --ui",
-    "test": "vitest"
+    "types": "tsc --emitDeclarationOnly --allowJs --declaration --skipLibCheck index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +18,9 @@
   },
   "homepage": "https://github.com/stevekinney/testing-javascript#readme",
   "devDependencies": {
-    "@vitest/ui": "^2.1.1",
-    "vitest": "^2.1.1"
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.6"
   }
 }

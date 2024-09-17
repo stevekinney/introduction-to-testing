@@ -1,7 +1,7 @@
-import { defineConfig } from 'vitest/config';
+import { mergeConfig } from 'vitest/config';
+import config from './vite.config';
 
-export default defineConfig({
-  assetsInclude: ['**/*.html'],
+export default mergeConfig(config, {
   test: {
     environment: 'happy-dom',
   },

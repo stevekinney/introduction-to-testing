@@ -33,7 +33,8 @@
     "examples/guess-the-number",
     "examples/basic-math",
     "examples/characters",
-    "examples/accident-counter"
+    "examples/accident-counter",
+    "packages/css-configuration"
   ],
   "devDependencies": {
     "prettier": "^3.3.3"
