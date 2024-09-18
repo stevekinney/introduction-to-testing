@@ -35,7 +35,7 @@
     "examples/characters",
     "examples/accident-counter",
     "packages/css-configuration",
-    "packages/utilities"
+    "packages/utility-belt"
   ],
   "devDependencies": {
     "prettier": "^3.3.3",
