@@ -11,7 +11,7 @@ export const Task = memo(({ task }: TaskProps) => {
   const { updateTask, removeTask } = useTaskActions();
 
   return (
-    <li className="block p-4 space-y-2 border-t first:rounded-t-md border-x last:border-b last:rounded-b-md dark:border-slate-700 border-slate-300">
+    <li className="block space-y-2 border-x border-t border-slate-300 p-4 first:rounded-t-md last:rounded-b-md last:border-b dark:border-slate-700">
       <header className="flex flex-row items-center gap-4">
         <label htmlFor={`toggle-${task.id}`} className="sr-only">
           Mark Task as {task.completed ? 'Incomplete' : 'Complete'}
@@ -19,7 +19,7 @@ export const Task = memo(({ task }: TaskProps) => {
         <input
           id={`toggle-${task.id}`}
           type="checkbox"
-          className="block w-6 h-6"
+          className="block h-6 w-6"
           checked={task.completed}
           onChange={() => updateTask(task.id, { completed: !task.completed })}
         />
@@ -31,11 +31,11 @@ export const Task = memo(({ task }: TaskProps) => {
           ❌
         </button>
       </header>
-      <label className="text-xs grid grid-cols-[1.25rem_1fr] gap-1 cursor-pointer rounded-md bg-primary-50 dark:bg-slate-800 border-2 border-primary-100 dark:border-slate-900 p-2">
-        <input type="checkbox" className="sr-only peer" />
-        <ChevronRightCircle className="block w-4 h-4 transition-transform peer-checked:rotate-90" />
+      <label className="bg-primary-50 border-primary-100 grid cursor-pointer grid-cols-[1.25rem_1fr] gap-1 rounded-md border-2 p-2 text-xs dark:border-slate-900 dark:bg-slate-800">
+        <input type="checkbox" className="peer sr-only" />
+        <ChevronRightCircle className="block h-4 w-4 transition-transform peer-checked:rotate-90" />
         <h3 className="select-none">Metadata</h3>
-        <div className="hidden col-span-2 gap-2 peer-checked:flex">
+        <div className="col-span-2 hidden gap-2 peer-checked:flex">
           <DateTime date={task.createdAt} title="Created" />
           <DateTime date={task.lastModified} title="Modified" />
         </div>

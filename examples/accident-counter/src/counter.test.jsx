@@ -21,7 +21,7 @@ describe('Counter Component', () => {
 
   it('increments the count when the "Increment" button is clicked', async () => {
     const incrementButton = screen.getByText('Increment');
-    await userEvent.click(incrementButton);  // Using userEvent for a real click event
+    await userEvent.click(incrementButton); // Using userEvent for a real click event
 
     const countElement = screen.getByTestId('counter-count');
     expect(countElement).toHaveTextContent('1');
@@ -29,7 +29,7 @@ describe('Counter Component', () => {
 
   it('displays "day" when the count is 1', async () => {
     const incrementButton = screen.getByText('Increment');
-    await userEvent.click(incrementButton);  // Increment the count
+    await userEvent.click(incrementButton); // Increment the count
 
     const unitElement = screen.getByTestId('counter-unit');
     expect(unitElement).toHaveTextContent('day');
@@ -39,8 +39,8 @@ describe('Counter Component', () => {
     const incrementButton = screen.getByText('Increment');
     const decrementButton = screen.getByText('Decrement');
 
-    await userEvent.click(incrementButton);  // Increment first
-    await userEvent.click(decrementButton);  // Then decrement
+    await userEvent.click(incrementButton); // Increment first
+    await userEvent.click(decrementButton); // Then decrement
 
     const countElement = screen.getByTestId('counter-count');
     expect(countElement).toHaveTextContent('0');
@@ -48,7 +48,7 @@ describe('Counter Component', () => {
 
   it('does not allow decrementing below 0', async () => {
     const decrementButton = screen.getByText('Decrement');
-    await userEvent.click(decrementButton);  // Should not decrement below 0
+    await userEvent.click(decrementButton); // Should not decrement below 0
 
     const countElement = screen.getByTestId('counter-count');
     expect(countElement).toHaveTextContent('0');
@@ -58,8 +58,8 @@ describe('Counter Component', () => {
     const incrementButton = screen.getByText('Increment');
     const resetButton = screen.getByText('Reset');
 
-    await userEvent.click(incrementButton);  // Increment first
-    await userEvent.click(resetButton);      // Then reset
+    await userEvent.click(incrementButton); // Increment first
+    await userEvent.click(resetButton); // Then reset
 
     const countElement = screen.getByTestId('counter-count');
     expect(countElement).toHaveTextContent('0');
@@ -78,7 +78,7 @@ describe('Counter Component', () => {
     await userEvent.click(incrementButton);
 
     expect(document.title).toBe('1 day');
-    
+
     await userEvent.click(incrementButton);
     expect(document.title).toBe('2 days');
   });

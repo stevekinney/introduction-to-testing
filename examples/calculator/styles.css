@@ -4,21 +4,21 @@
 
 @layer base {
   body {
-    @apply flex justify-center items-center h-screen bg-purple-50 font-sans m-0;
+    @apply m-0 flex h-screen items-center justify-center bg-purple-50 font-sans;
   }
 
   button {
-    @apply bg-slate-600 text-white text-xl cursor-pointer flex items-center justify-center transition duration-100 ease-in-out p-4 hover:bg-slate-700 active:bg-slate-800 rounded-xl;
+    @apply flex cursor-pointer items-center justify-center rounded-xl bg-slate-600 p-4 text-xl text-white transition duration-100 ease-in-out hover:bg-slate-700 active:bg-slate-800;
   }
 }
 
 @layer components {
   .calculator {
-    @apply grid grid-cols-4 gap-2 bg-slate-950 rounded-xl shadow-lg p-4;
+    @apply grid grid-cols-4 gap-2 rounded-xl bg-slate-950 p-4 shadow-lg;
   }
 
   .number {
-    @apply bg-slate-600 text-white text-xl cursor-pointer flex items-center justify-center transition duration-100 ease-in-out p-4 hover:bg-slate-700 active:bg-slate-800 rounded-xl;
+    @apply flex cursor-pointer items-center justify-center rounded-xl bg-slate-600 p-4 text-xl text-white transition duration-100 ease-in-out hover:bg-slate-700 active:bg-slate-800;
     &[data-value='0'] {
       @apply col-span-3;
     }
@@ -29,7 +29,7 @@
   }
 
   #equals {
-    @apply bg-green-500 hover:bg-green-600 active:bg-green-700 col-start-3 col-span-2;
+    @apply col-span-2 col-start-3 bg-green-500 hover:bg-green-600 active:bg-green-700;
   }
 
   #clear {
@@ -37,6 +37,6 @@
   }
 
   .display {
-    @apply col-span-4 bg-cyan-100 text-cyan-800 border-cyan-200 outline outline-2 outline-transparent text-2xl text-right p-4 block font-semibold rounded-md;
+    @apply col-span-4 block rounded-md border-cyan-200 bg-cyan-100 p-4 text-right text-2xl font-semibold text-cyan-800 outline outline-2 outline-transparent;
   }
 }

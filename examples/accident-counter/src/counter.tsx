@@ -10,9 +10,9 @@ export const Counter = () => {
   }, [state.count]);
 
   return (
-    <div className="p-8 space-y-8 text-center bg-white border rounded-md shadow-lg border-slate-400">
+    <div className="space-y-8 rounded-md border border-slate-400 bg-white p-8 text-center shadow-lg">
       <div className="space-y-4">
-        <div data-testid="counter-count" className="font-semibold text-8xl">
+        <div data-testid="counter-count" className="text-8xl font-semibold">
           {state.count}
         </div>
         <p>
