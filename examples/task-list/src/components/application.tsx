@@ -1,5 +1,5 @@
 import { CreateTask } from './create-task';
-import { TaskProvider } from './task-context';
+import { TaskProvider } from '../contexts/task-context';
 import { Tasks } from './tasks';
 
 export const Application = () => {

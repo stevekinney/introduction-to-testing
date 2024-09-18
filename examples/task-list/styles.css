@@ -3,25 +3,26 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-50;
+  }
+
   label {
     @apply block text-sm font-medium leading-6;
-    &[for]:has(~ input[required]) {
-      @apply after:content-['*'] after:text-red-600;
-    }
   }
 
   input[type='text'],
   input[type='email'],
   input[type='password'] {
-    @apply text-sm sm:text-base block w-full rounded-md border-0 py-1.5 px-2.5 text-slate-900 shadow-sm ring-1 ring-inset ring-primary-700/20 placeholder:text-slate-400 sm:text-sm sm:leading-6 placeholder:text-primary-600;
-    @apply focus:ring-2 focus:ring-primary-600 focus:outline-none;
+    @apply text-sm sm:text-base block w-full rounded-md border-0 py-1.5 px-2.5 shadow-sm ring-1 ring-inset ring-primary-600 placeholder:text-primary-600 sm:text-sm sm:leading-6 dark:bg-slate-800 dark:text-slate-50 dark:placeholder:text-slate-400;
+    @apply focus:ring-2 focus:outline-none;
     &:has(+ button[type='submit']) {
       @apply block w-full rounded-r-none;
     }
   }
 
   input[type='checkbox'] {
-    @apply h-4 w-4 rounded border-primary-500 accent-primary-600;
+    @apply h-4 w-4 rounded border-primary-500 accent-primary-600 dark:bg-slate-800 dark:border-slate-700 dark:accent-primary-600;
   }
 
   button {
@@ -41,13 +42,17 @@
   }
 
   .button-primary {
-    @apply bg-primary-600 text-white cursor-pointer ring-primary-700 transition duration-100 ease-in-out hover:bg-primary-700 active:bg-primary-800 disabled:bg-primary-600/50 disabled:hover:bg-primary-600/50 disabled:active:bg-primary-600/50 disabled:cursor-not-allowed disabled:ring-primary-700/20;
+    @apply bg-primary-600 text-white cursor-pointer ring-primary-600 transition duration-100 ease-in-out hover:bg-primary-700 active:bg-primary-800 disabled:bg-primary-600/50 disabled:hover:bg-primary-600/50 disabled:active:bg-primary-600/50 disabled:cursor-not-allowed;
+  }
+
+  .button-small {
+    @apply py-1 px-1.5 text-xs;
   }
 
   .button-destructive {
-    @apply bg-red-600 text-white cursor-pointer ring-red-700 transition duration-100 ease-in-out hover:bg-red-700 active:bg-red-800 disabled:bg-red-600/50 disabled:hover:bg-red-600/50 disabled:active:bg-red-600/50 disabled:cursor-not-allowed disabled:ring-red-700/20;
+    @apply bg-red-600 text-white cursor-pointer ring-0 transition duration-100 ease-in-out hover:bg-red-700 active:bg-red-800 disabled:bg-red-600/50 disabled:hover:bg-red-600/50 disabled:active:bg-red-600/50 disabled:cursor-not-allowed disabled:ring-red-700/20;
     &.button-ghost {
-      @apply bg-transparent text-red-600 ring-red-600 hover:bg-red-600/10;
+      @apply bg-transparent text-red-600 ring-red-600 hover:bg-red-600/10 active:bg-red-600/20 dark:hover:bg-red-400/30 dark:active:bg-red-400/40;
     }
   }
 }

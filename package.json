@@ -34,7 +34,8 @@
     "examples/basic-math",
     "examples/characters",
     "examples/accident-counter",
-    "packages/css-configuration"
+    "packages/css-configuration",
+    "packages/utilities"
   ],
   "devDependencies": {
     "prettier": "^3.3.3"

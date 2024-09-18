@@ -1,6 +1,6 @@
 import { v4 as id } from 'uuid';
 
-/** @typedef {import('../types').Task} Task */
+/** @typedef {import('../src/types').Task} Task */
 
 /** @type {Task[]} tasks - An array to store tasks. */
 let tasks = [];

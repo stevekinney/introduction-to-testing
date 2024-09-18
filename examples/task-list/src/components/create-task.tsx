@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTaskActions } from './task-context';
+import { useTaskActions } from '../contexts/task-context';
 
 type CreateTaskProps = {
   onSubmit: (title: string) => void;
@@ -23,7 +23,7 @@ export const CreateTask = ({ onSubmit }: CreateTaskProps) => {
         <label htmlFor="new-task-title" className="sr-only">
           Title
         </label>
-        <div className="flex">
+        <div className="flex flex-col sm:flex-row">
           <input
             type="text"
             name="title"
