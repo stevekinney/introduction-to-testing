@@ -1,38 +1,34 @@
-// Import the readline module to handle user input
+import { Game } from './game.js';
+import chalk from 'chalk';
 import { createInterface } from 'readline';
 
-// Create an interface for reading from stdin (standard input)
 const rl = createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-// Generate a random number between 1 and 100
-const randomNumber = Math.floor(Math.random() * 100) + 1;
-let attempts = 0;
+let game = new Game(1, 100);
 
-// Function to handle user's guess
-function askQuestion() {
-  rl.question('Guess the number (between 1 and 100): ', (answer) => {
+function startGame() {
+  rl.question(`Guess ${chalk.cyanBright('→')} `, (answer) => {
     const guess = parseInt(answer, 10);
-    attempts++;
 
     // Check if the user's guess is correct
     if (isNaN(guess)) {
-      console.log('Please enter a valid number.');
-      askQuestion(); // Ask again if input is invalid
-    } else if (guess < randomNumber) {
-      console.log('Too low!');
-      askQuestion(); // Ask again
-    } else if (guess > randomNumber) {
-      console.log('Too high!');
-      askQuestion(); // Ask again
+      console.log(chalk.red('Please enter a valid number.'));
+      startGame();
+    }
+
+    const result = game.guess(guess);
+
+    console.log(result);
+
+    if (result.startsWith('Correct')) {
+      rl.close();
     } else {
-      console.log(`Correct! You guessed the number in ${attempts} attempts.`);
-      rl.close(); // End the game
+      startGame();
     }
   });
 }
 
-// Start the game by asking the first question
-askQuestion();
+startGame();

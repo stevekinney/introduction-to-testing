@@ -4,7 +4,7 @@
   "description": "A set of examples and exercises for Steve Kinney's \"Introduction to Testing\" course for Frontend Masters.",
   "main": "index.js",
   "scripts": {
-    "test": "vitest",
+    "test": "echo \"Please run the tests from inside one of the examples!\" && exit 0",
     "format": "prettier --write ."
   },
   "repository": {
@@ -35,7 +35,8 @@
     "examples/characters",
     "examples/accident-counter",
     "packages/css-configuration",
-    "packages/utility-belt"
+    "packages/utility-belt",
+    "examples/yearbook"
   ],
   "devDependencies": {
     "prettier": "^3.3.3",
