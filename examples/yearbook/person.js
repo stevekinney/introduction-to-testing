@@ -1,4 +1,14 @@
+/**
+ * A person in the yearbook.
+ * @class Person
+ * @param {number} id
+ * @param {string} firstName
+ * @param {string} lastName
+ * @param {string} dateOfBirth
+ */
 export class Person {
+  static id = 0;
+
   /**
    * A person in the yearbook.
    * @param {string} firstName
@@ -6,6 +16,7 @@ export class Person {
    * @param {string} dateOfBirth
    */
   constructor(firstName, lastName, dateOfBirth) {
+    this.id = ++Person.id;
     this.firstName = firstName;
     this.lastName = lastName;
     this.dateOfBirth = dateOfBirth;
