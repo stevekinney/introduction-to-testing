@@ -36,7 +36,9 @@
     "examples/accident-counter",
     "packages/css-configuration",
     "packages/utility-belt",
-    "examples/yearbook"
+    "examples/yearbook",
+    "packages/scratchpad",
+    "examples/scratchpad"
   ],
   "devDependencies": {
     "prettier": "^3.3.3",
