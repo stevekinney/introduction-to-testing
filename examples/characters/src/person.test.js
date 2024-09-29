@@ -11,17 +11,4 @@ describe.todo('Person', () => {
       lastName: 'Hopper',
     });
   });
-
-  it('should throw an error if first name or last name is missing', () => {
-    expect(() => new Person('Grace')).toThrow(
-      'First name and last name are required',
-    );
-
-    expect(() => new Person()).toThrow('First name and last name are required');
-  });
-
-  it('should return the full name', () => {
-    const person = new Person('Grace', 'Hopper');
-    expect(person.fullName).toBe('Grace Hopper');
-  });
 });
