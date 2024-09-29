@@ -37,8 +37,9 @@
     "packages/css-configuration",
     "packages/utility-belt",
     "examples/yearbook",
-    "packages/scratchpad",
-    "examples/scratchpad"
+    "examples/scratchpad",
+    "examples/utility-belt",
+    "examples/strictly-speaking"
   ],
   "devDependencies": {
     "prettier": "^3.3.3",
