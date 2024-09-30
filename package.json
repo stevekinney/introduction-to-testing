@@ -28,7 +28,6 @@
   "workspaces": [
     "packages/css-configuration",
     "examples/calculator",
-    "examples/tic-tac-toe",
     "examples/task-list",
     "examples/authentication",
     "examples/guess-the-number",

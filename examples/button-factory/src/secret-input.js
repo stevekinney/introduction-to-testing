@@ -1,3 +1,11 @@
+function getStoredSecret() {
+  try {
+    return localStorage.getItem('secret') || '';
+  } catch {
+    return '';
+  }
+}
+
 export function createSecretInput() {
   const id = 'secret-input';
 
@@ -10,6 +18,7 @@ export function createSecretInput() {
   input.type = 'password';
   input.name = 'secret';
   input.placeholder = 'Enter your secret…';
+  input.value = getStoredSecret();
 
   label.htmlFor = id;
   label.textContent = 'Secret';
