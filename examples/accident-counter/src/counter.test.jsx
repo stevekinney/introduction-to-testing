@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { Counter } from './counter';
 
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 describe('Counter ', () => {
   beforeEach(() => {
