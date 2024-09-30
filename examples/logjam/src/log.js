@@ -1,19 +1,39 @@
 /// <reference types="vite/client" />
 
-export function log(...args) {
+import { sendToServer } from './send-to-server';
+
+/**
+ * Log a message to the console in development mode or send it to the server in production mode.
+ * @param  {string} message
+ */
+export function log(message) {
   if (import.meta.env.MODE !== 'production') {
-    console.log(...args);
+    console.log(message);
+  } else {
+    sendToServer('info', message);
   }
 }
 
-log.error = function error(...args) {
+/**
+ * Log a message to the console in development mode or send it to the server in production mode.
+ * @param  {string} message
+ */
+log.warn = function warn(message) {
   if (import.meta.env.MODE !== 'production') {
-    console.log(...args);
+    console.warn(message);
+  } else {
+    sendToServer('warn', message);
   }
 };
 
-log.warn = function warn(...args) {
+/**
+ * Log a message to the console in development mode or send it to the server in production mode.
+ * @param  {string} message
+ */
+log.error = function error(message) {
   if (import.meta.env.MODE !== 'production') {
-    console.warn(...args);
+    console.log(message);
+  } else {
+    sendToServer('error', message);
   }
 };
