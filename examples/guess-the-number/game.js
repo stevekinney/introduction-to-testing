@@ -5,7 +5,9 @@ export class Game {
    * @param {number} maximum - The maximum number to guess.
    */
   constructor(minimum, maximum) {
-    this.secretNumber = Math.ceil(Math.random() * maximum - minimum) + minimum;
+    const seed = Math.random();
+
+    this.secretNumber = Math.ceil(seed * maximum - minimum) + minimum;
     this.guesses = new Set();
 
     console.log(`Guess the number between ${minimum} and ${maximum}.`);
