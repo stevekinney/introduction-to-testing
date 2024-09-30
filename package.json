@@ -38,7 +38,8 @@
     "examples/scratchpad",
     "examples/utility-belt",
     "examples/strictly-speaking",
-    "examples/button-factory"
+    "examples/button-factory",
+    "examples/logjam"
   ],
   "devDependencies": {
     "prettier": "^3.3.3",

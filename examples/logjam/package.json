@@ -1,0 +1,24 @@
+{
+  "name": "logjam",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vitest --ui",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevekinney/testing-javascript.git"
+  },
+  "author": "Steve Kinney <hello@stevekinney.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevekinney/testing-javascript/issues"
+  },
+  "homepage": "https://github.com/stevekinney/testing-javascript#readme",
+  "devDependencies": {
+    "@vitest/ui": "^2.1.1",
+    "vite": "^5.4.5",
+    "vitest": "^2.1.1"
+  }
+}
