@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { useTaskActions } from '../contexts/task-context';
 
-export const CreateTask = () => {
-  const { addTask } = useTaskActions();
+export const CreateTask = ({ onSubmit }) => {
   const [title, setTitle] = useState('');
 
   return (
@@ -11,7 +9,7 @@ export const CreateTask = () => {
       action="/api/tasks"
       onSubmit={(event) => {
         event.preventDefault();
-        addTask(title);
+        onSubmit(title);
         setTitle('');
       }}
     >
@@ -19,7 +17,7 @@ export const CreateTask = () => {
         <label htmlFor="new-task-title" className="sr-only">
           Title
         </label>
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-row">
           <input
             type="text"
             name="title"

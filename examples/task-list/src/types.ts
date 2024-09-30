@@ -8,15 +8,6 @@ export type Task = {
 
 export type TaskData = Partial<Omit<Task, 'id'>>;
 
-export interface TaskContextProps {
-  tasks: Task[];
-  loading: boolean;
-  error: string | null;
-  addTask: (title: string) => void;
-  updateTask: (id: string, updatedTask: Partial<Omit<Task, 'id'>>) => void;
-  removeTask: (id: string) => void;
-}
-
 export type TaskState = {
   tasks: Task[];
   loading: boolean;
