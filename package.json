@@ -29,7 +29,6 @@
     "packages/css-configuration",
     "examples/calculator",
     "examples/task-list",
-    "examples/authentication",
     "examples/guess-the-number",
     "examples/basic-math",
     "examples/characters",
