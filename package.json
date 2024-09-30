@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/stevekinney/testing-javascript#readme",
   "workspaces": [
+    "packages/css-configuration",
     "examples/calculator",
     "examples/tic-tac-toe",
     "examples/task-list",
@@ -34,7 +35,6 @@
     "examples/basic-math",
     "examples/characters",
     "examples/accident-counter",
-    "packages/css-configuration",
     "examples/scratchpad",
     "examples/utility-belt",
     "examples/strictly-speaking",
