@@ -27,6 +27,7 @@
   "homepage": "https://github.com/stevekinney/testing-javascript#readme",
   "workspaces": [
     "packages/css-configuration",
+    "packages/utilities",
     "examples/calculator",
     "examples/task-list",
     "examples/guess-the-number",

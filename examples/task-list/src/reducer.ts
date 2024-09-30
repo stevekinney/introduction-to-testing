@@ -1,4 +1,4 @@
-import type { Task, TaskAction, TaskState } from './types';
+import type { TaskAction, TaskState } from './types';
 
 export const initialState: TaskState = {
   tasks: [],
