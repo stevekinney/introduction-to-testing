@@ -1,11 +1,7 @@
 import { useState } from 'react';
 import { useTaskActions } from '../contexts/task-context';
 
-type CreateTaskProps = {
-  onSubmit: (title: string) => void;
-};
-
-export const CreateTask = ({ onSubmit }: CreateTaskProps) => {
+export const CreateTask = () => {
   const { addTask } = useTaskActions();
   const [title, setTitle] = useState('');
 
