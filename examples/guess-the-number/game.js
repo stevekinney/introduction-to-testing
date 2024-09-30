@@ -4,7 +4,7 @@ export class Game {
    * @param {number} minimum - The minimum number to guess.
    * @param {number} maximum - The maximum number to guess.
    */
-  constructor(minimum, maximum) {
+  constructor(minimum = 1, maximum = 100) {
     const seed = Math.random();
 
     this.secretNumber = Math.ceil(seed * maximum - minimum) + minimum;
