@@ -4,7 +4,7 @@ import { Game } from './game';
 describe('Game', () => {
   it('should return an instance of a game', () => {
     // This is mostly a dummy test.
-    const game = new Game(1, 10);
+    const game = new Game();
     expect(game).toBeInstanceOf(Game);
   });
 
@@ -12,7 +12,7 @@ describe('Game', () => {
     // Thisn't really a useful test.
     // Do I *really* care about the type of the secret number?
     // Do I *really* care about the name of a "private" property?
-    const game = new Game(1, 10);
+    const game = new Game();
     expect(game.secretNumber).toBeTypeOf('number');
   });
 });
