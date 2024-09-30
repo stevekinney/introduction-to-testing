@@ -39,7 +39,8 @@
     "examples/yearbook",
     "examples/scratchpad",
     "examples/utility-belt",
-    "examples/strictly-speaking"
+    "examples/strictly-speaking",
+    "examples/button-factory"
   ],
   "devDependencies": {
     "prettier": "^3.3.3",
