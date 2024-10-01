@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/dom';
 import userEvent from '@testing-library/user-event';
-import { createSecretInput } from './secret-input.js';
-
 import '@testing-library/jest-dom/vitest';
+
+import { createSecretInput } from './secret-input.js';
 
 describe('createSecretInput', async () => {
   beforeEach(() => {
