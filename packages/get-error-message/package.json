@@ -1,7 +1,7 @@
 {
-  "name": "utilities",
+  "name": "get-error-message",
   "version": "1.0.0",
-  "description": "Some little utilities",
+  "description": "A function that returns the error message from an error object.",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/stevekinney/testing-javascript/issues"
   },
-  "homepage": "https://github.com/stevekinney/testing-javascript#readme",
-  "devDependencies": {
-    "typescript": "^5.6.2"
-  }
+  "homepage": "https://github.com/stevekinney/testing-javascript#readme"
 }

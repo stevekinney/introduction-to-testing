@@ -27,7 +27,7 @@
   "homepage": "https://github.com/stevekinney/testing-javascript#readme",
   "workspaces": [
     "packages/css-configuration",
-    "packages/utilities",
+    "packages/get-error-message",
     "examples/calculator",
     "examples/task-list",
     "examples/guess-the-number",
@@ -37,7 +37,7 @@
     "examples/scratchpad",
     "examples/utility-belt",
     "examples/strictly-speaking",
-    "examples/button-factory",
+    "examples/element-factory",
     "examples/logjam"
   ],
   "devDependencies": {

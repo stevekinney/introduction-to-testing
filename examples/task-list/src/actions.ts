@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { getErrorMessage } from 'utilities';
+import { getErrorMessage } from 'get-error-message';
 
 import {
   Task,
