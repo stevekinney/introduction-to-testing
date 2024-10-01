@@ -1,4 +1,3 @@
-import { it, expect, describe } from 'vitest';
 import { createButton } from './button.js';
 
 describe('createButton', () => {

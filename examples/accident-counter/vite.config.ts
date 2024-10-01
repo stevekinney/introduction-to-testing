@@ -6,4 +6,8 @@ import { css } from 'css-configuration';
 export default defineConfig({
   plugins: [react()],
   css,
+  test: {
+    environment: 'happy-dom',
+    globals: true,
+  },
 });

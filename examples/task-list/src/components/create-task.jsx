@@ -15,7 +15,7 @@ export const CreateTask = ({ onSubmit }) => {
     >
       <div>
         <label htmlFor="new-task-title" className="sr-only">
-          Title
+          Create Task
         </label>
         <div className="flex flex-row">
           <input

@@ -1,5 +1,3 @@
-import { it, expect } from 'vitest';
-
 it('should properly assign to localStorage', () => {
   const key = 'secret';
   const message = "It's a secret to everybody.";

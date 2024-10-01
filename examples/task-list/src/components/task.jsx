@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { ChevronRightCircle } from 'lucide-react';
 import { DateTime } from './date-time';
 
 export const Task = memo(({ task, updateTask, removeTask }) => {
@@ -7,7 +6,7 @@ export const Task = memo(({ task, updateTask, removeTask }) => {
     <li className="block space-y-2 border-x border-t border-slate-300 bg-white p-4 first:rounded-t-md last:rounded-b-md last:border-b dark:border-slate-700">
       <header className="flex flex-row items-center gap-4">
         <label htmlFor={`toggle-${task.id}`} className="sr-only">
-          Mark Task as {task.completed ? 'Incomplete' : 'Complete'}
+          Completed?
         </label>
         <input
           id={`toggle-${task.id}`}
@@ -20,6 +19,7 @@ export const Task = memo(({ task, updateTask, removeTask }) => {
         <button
           className="button-small button-destructive button-ghost"
           onClick={() => removeTask(task.id)}
+          aria-label='Remove Task'
         >
           ❌
         </button>
