@@ -11,17 +11,20 @@ describe('AlertButton', () => {
   it('should render an alert button', async () => {});
 
   it.only('should trigger an alert', async () => {
-    // const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
+    const handleSubmit = vi.fn();
 
-    render(<AlertButton />);
+    render(<AlertButton onSubmit={handleSubmit} message="Default Message" />);
+
     const input = screen.getByLabelText('Message');
     const button = screen.getByRole('button', { name: /trigger alert/i });
 
     await act(async () => {
+      await userEvent.clear(input);
       await userEvent.type(input, 'Hello');
+      await userEvent.click(button);
     });
 
-    // Click on the button.
-    // Look and see if alert() was called with the message.
+    expect(handleSubmit).toHaveBeenCalled();
+    expect(handleSubmit).toHaveBeenCalledWith('Hello');
   });
 });
