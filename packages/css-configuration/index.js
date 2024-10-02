@@ -9,7 +9,7 @@ export const css = {
   postcss: {
     plugins: [
       tailwindcss({
-        content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
+        content: ['./src/**/*.{html,js,jsx,ts,tsx}', './index.html'],
         theme: {
           extend: {
             container: {

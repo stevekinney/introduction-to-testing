@@ -1,3 +1,4 @@
+import * as url from 'node:url';
 import express from 'express';
 import bodyParser from 'body-parser';
 import chalk from 'chalk';
@@ -59,7 +60,16 @@ app.delete('/api/tasks/:id', (req, res) => {
   res.sendStatus(204); // No content to send back
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(chalk.magenta(`Server is running on port ${chalk.green(PORT)}…`));
-});
+if (import.meta.url.startsWith('file:')) {
+  const modulePath = url.fileURLToPath(import.meta.url);
+  if (process.argv[1] === modulePath) {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(
+        chalk.magenta(`Server is running on port ${chalk.green(PORT)}…`),
+      );
+    });
+  }
+}
+
+export default app;
