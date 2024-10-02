@@ -56,7 +56,7 @@ app.delete('/api/tasks/:id', (req, res) => {
     return res.status(404).json({ message: 'Task not found' });
   }
 
-  res.status(204).send(); // No content to send back
+  res.sendStatus(204); // No content to send back
 });
 
 const PORT = process.env.PORT || 3000;
