@@ -2,21 +2,21 @@ import { Person } from './person.js';
 import { rollDice } from './roll-dice.js';
 
 export class Character extends Person {
-  constructor(firstName, lastName, role) {
+  constructor(firstName, lastName, role, level = 1, roll = rollDice) {
     super(firstName, lastName);
 
     this.role = role;
-    this.level = 1;
+    this.level = level;
 
     this.createdAt = new Date();
     this.lastModified = this.createdAt;
 
-    this.strength = rollDice(4, 6);
-    this.dexterity = rollDice(4, 6);
-    this.intelligence = rollDice(4, 6);
-    this.wisdom = rollDice(4, 6);
-    this.charisma = rollDice(4, 6);
-    this.constitution = rollDice(4, 6);
+    this.strength = roll(4, 6);
+    this.dexterity = roll(4, 6);
+    this.intelligence = roll(4, 6);
+    this.wisdom = roll(4, 6);
+    this.charisma = roll(4, 6);
+    this.constitution = roll(4, 6);
   }
 
   levelUp() {
