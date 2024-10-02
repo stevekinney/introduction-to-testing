@@ -11,6 +11,6 @@
       "./*.html?raw": ["./*"]
     }
   },
-  "include": ["examples/**/*.js"],
+  "include": ["examples/**/*.js", "examples/**/*.svelte"],
   "exclude": ["node_modules", "dist"]
 }

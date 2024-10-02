@@ -10,5 +10,7 @@
     },
     "jsx": "react-jsx",
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "include": ["examples/**/*.js", "examples/**/*.svelte", "examples/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
