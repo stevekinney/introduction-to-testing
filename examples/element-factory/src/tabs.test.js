@@ -7,10 +7,7 @@ describe('Tabs', () => {
   beforeEach(() => {
     render(Tabs, {
       tabs: [
-        {
-          label: 'Venue',
-          content: 'This year, we will be at this awesome venue',
-        },
+        { label: 'Venue', content: 'We will be at this place!' },
         { label: 'Lineup', content: 'Check out our exciting lineup!' },
         { label: 'Tickets', content: 'Buy tickets today!' },
       ],
@@ -39,5 +36,10 @@ describe('Tabs', () => {
 
     const content = screen.getByRole('tabpanel', { hidden: false });
     expect(content).toHaveTextContent('lineup');
+  });
+
+  it('should render the content of the first tab by default', async () => {
+    const content = screen.getByRole('tabpanel', { hidden: false });
+    expect(content).toHaveTextContent('We will be at this place!');
   });
 });

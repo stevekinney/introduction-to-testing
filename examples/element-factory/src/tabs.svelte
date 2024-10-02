@@ -1,16 +1,10 @@
 <script>
-  import { onMount } from 'svelte';
-
+  /** @type {Array<{ title: string, content: string, id?: string }>} */
   export let tabs = [];
-
-  let tabbedContent = null;
   let activeIndex = 0;
-
-  const isSelected = (index) => index === activeIndex;
-  const getTabIndex = (index) => (isSelected(index) ? 0 : -1);
 </script>
 
-<section bind:this={tabbedContent}>
+<section>
   <div role="tablist">
     {#each tabs as tab, i}
       {@const id = tab.id || i}
