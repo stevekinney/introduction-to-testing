@@ -5,8 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [svelte(), react()],
   test: {
-    environment: 'happy-dom',
     globals: true,
+    environment: 'happy-dom',
     setupFiles: ['@testing-library/jest-dom/vitest'],
   },
 });

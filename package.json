@@ -38,7 +38,8 @@
     "examples/utility-belt",
     "examples/strictly-speaking",
     "examples/element-factory",
-    "examples/logjam"
+    "examples/logjam",
+    "examples/directory"
   ],
   "devDependencies": {
     "prettier": "^3.3.3",
