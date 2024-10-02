@@ -8,6 +8,7 @@ describe('createSecretInput', async () => {
   beforeEach(() => {
     vi.spyOn(localStorage, 'getItem').mockReturnValue('test secret');
     vi.spyOn(localStorage, 'setItem');
+    vi.spyOn(localStorage, 'removeItem');
 
     document.body.innerHTML = '';
     document.body.appendChild(createSecretInput());
@@ -31,5 +32,13 @@ describe('createSecretInput', async () => {
     await userEvent.click(button);
 
     expect(localStorage.setItem).toHaveBeenCalledWith('secret', 'new secret');
+  });
+
+  it('should clear the secret from localStorage', async () => {
+    const button = screen.getByText('Clear Secret');
+
+    await userEvent.click(button);
+
+    expect(localStorage.removeItem).toHaveBeenCalledWith('secret');
   });
 });

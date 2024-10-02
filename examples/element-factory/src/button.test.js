@@ -11,5 +11,9 @@ describe('createButton', () => {
     expect(button.textContent).toBe('Click Me');
   });
 
-  it.todo('should change the text to "Clicked!" when clicked', async () => {});
+  it('should change the text to "Clicked!" when clicked', async () => {
+    const button = createButton();
+    button.click();
+    expect(button.textContent).toBe('Clicked!');
+  });
 });

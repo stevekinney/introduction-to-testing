@@ -12,7 +12,8 @@ export function createSecretInput() {
   const container = document.createElement('div');
   const input = document.createElement('input');
   const label = document.createElement('label');
-  const button = document.createElement('button');
+  const submitButton = document.createElement('button');
+  const clearButton = document.createElement('button');
 
   input.id = id;
   input.type = 'password';
@@ -23,16 +24,24 @@ export function createSecretInput() {
   label.htmlFor = id;
   label.textContent = 'Secret';
 
-  button.id = `${id}-button`;
-  button.textContent = 'Store Secret';
-  button.addEventListener('click', () => {
+  submitButton.id = `${id}-button`;
+  submitButton.textContent = 'Store Secret';
+  submitButton.addEventListener('click', () => {
     localStorage.setItem('secret', input.value);
+    input.value = '';
+  });
+
+  clearButton.id = `${id}-clear-button`;
+  clearButton.textContent = 'Clear Secret';
+  clearButton.addEventListener('click', () => {
+    localStorage.removeItem('secret');
     input.value = '';
   });
 
   container.appendChild(label);
   container.appendChild(input);
-  container.appendChild(button);
+  container.appendChild(submitButton);
+  container.appendChild(clearButton);
 
   return container;
 }
