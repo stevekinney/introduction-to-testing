@@ -9,7 +9,7 @@ describe('Game', () => {
   });
 
   it('should have a secret number', () => {
-    // Thisn't really a useful test.
+    // This isn't really a useful test.
     // Do I *really* care about the type of the secret number?
     // Do I *really* care about the name of a "private" property?
     const game = new Game();
