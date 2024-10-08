@@ -2,8 +2,8 @@ import React from 'react';
 import { useReducer, useEffect } from 'react';
 import { reducer } from './reducer';
 
-export const Counter = () => {
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
+export const Counter = ({ initialCount = 0 }) => {
+  const [state, dispatch] = useReducer(reducer, { count: initialCount });
   const unit = state.count === 1 ? 'day' : 'days';
 
   useEffect(() => {
