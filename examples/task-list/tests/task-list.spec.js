@@ -1,8 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-/** @type {import('../start-server').DevelopmentServer} */
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:5173');
+  await page.goto('http://localhost:5174');
 });
 
 test('it should load the page', async ({ page }) => {
@@ -16,7 +15,7 @@ test('it should add a task', async ({ page }) => {
   await input.fill('Learn Playwright');
   await submit.click();
 
-  const heading = await page.getByRole('heading', { name: 'Learn Playwright' });
+  const heading = page.getByRole('heading', { name: 'Learn Playwright' });
 
   await expect(heading).toBeVisible();
 });
